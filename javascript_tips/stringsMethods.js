@@ -15,3 +15,4 @@
 'farooq'.repeat(3) // farooqfarooqfarooq
 'far ooq'.split('') // ['f', 'a', 'r', ' ', 'o', 'o', 'q']
 'far ooq'.split(' ') // ['far', 'ooq']
+
