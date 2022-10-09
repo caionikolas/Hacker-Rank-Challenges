@@ -1,0 +1,16 @@
+/* ----fontes ---- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+font-family: 'Poppins', sans-serif;
+
+/* ---- css tips ---- */
+* {
+  box-sizing: border-box;  /* Define tamanho da caixa */
+  margin: 0; 
+  padding: 0;
+}
+
+body{
+  min-height: auto; /* Altura minima (força a div ter uma altura mesmo se a mesma não tiver conteudo ou define um limite de altura q aquela div nao pode passar) */
+  
+}
