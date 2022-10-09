@@ -5,12 +5,60 @@ font-family: 'Poppins', sans-serif;
 
 /* ---- css tips ---- */
 * {
+  /* Reset padrão */
   box-sizing: border-box;  /* Define tamanho da caixa */
   margin: 0; 
   padding: 0;
 }
 
 body{
-  min-height: auto; /* Altura minima (força a div ter uma altura mesmo se a mesma não tiver conteudo ou define um limite de altura q aquela div nao pode passar) */
+  height: 100%; /* Define a Altura dos elementos Css (As propriedades max-height e min-height quando presentes, sobrescrevem a propriedade width) */
+
+  min-height: auto; /* Altura mínima (força a div ter uma altura mesmo se a mesma não tiver conteudo ou define um limite de altura q aquela div nao pode passar) */
+
+  max-height: auto; /* Altura máxima */
+
+  width: 100%; /* Define a Largura dos elementos Css (As propriedades max-width e min-width quando presentes, sobrescrevem a propriedade width) */
+
+  min-width: auto; /* Largura mínima */
+
+  max-width: auto; /* Largura máxima */
+
+  position: absolute; /* Propriedade CSS que define como um elemento qualquer pode ser posicionado no documento da página  (desbloquea as propriedades Top, Botton, Left e Right)
+
+  // static (padrão): Elementos estaticos na página, por conta disso não desbloquea as propriedades top, botton, left , right
   
+  // Fixed: Elemento fica fixo na página independente do scroll
+
+  // Sticky: Fixa o elemtento na tela quando chega na sua posição de rolagem
+
+  // Relative: Está posicionado em relação a sua posição normal
+
+  // Absolute: Posição está absoluta em relação a div pai que possui um position relative, caso não exista essa relação, ele será absoluto em relaçao ao posição do corpo da página(body) */
+
+  padding: auto; /* Espaçamento de dentro do elemento */
+
+  margin: auto; /* Espaçamento de fora do elemento */
+
+  justify-content: space-between; /* Alinha os itens horizontalmente 
+
+  // flex-end: Alinha tudo no final
+
+  // flex-start (padrão): Alinha tudo no começo
+
+  // center: Centraliza tudo
+
+  // space around: distribui os elementos levando em consideração o espaçamento entre eles
+
+  // space between: distribui os elementos levando em consideração o espaçamento entre eles porem sem as margens */
+
+  align-items: center; /* Alinha os itens verticalmente
+
+  // flex-start (padrão): Alinha tudo encima
+
+  // flex-end: Alinha tudo embaixo
+
+  // center: Centraliza tudo */
+
+  z-index: 10000; 
 }
