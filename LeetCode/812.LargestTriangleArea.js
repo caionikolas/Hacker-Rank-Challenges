@@ -2,28 +2,111 @@ var largestTriangleArea = function (points) {
   points.sort()
   console.log(points)
 
-  var usar = points.length - 1
-  var a = points[usar][0] - points[0][0]
+  //primeira parte
 
+  baseMaior = 0
+  baseMenor = 51
   for (let i = 0; i < points.length; i++) {
-    points[i].reverse()
+    if (baseMaior < points[i][0]) {
+      baseMaior = points[i][0]
+    }
+    if (baseMenor > points[i][0]) {
+      baseMenor = points[i][0]
+    }
   }
 
-  console.log(points)
+  base = baseMaior - baseMenor
+  console.log(base)
 
-  points.sort()
-  console.log(points)
+  alturaMaior = 0
+  alturaMenor = 51
+  for (let i = 0; i < points.length; i++) {
+    if (alturaMaior < points[i][1]) {
+      alturaMaior = points[i][1]
+    }
+    if (alturaMenor > points[i][1]) {
+      alturaMenor = points[i][1]
+    }
+  }
 
-  var usar2 = points.length - 1
-  var b = points[usar][0] - points[0][0]
+  altura = alturaMaior - alturaMenor
+  console.log(altura)
 
-  console.log(a, b)
+  if (base == altura){
+    return ((base * altura)/2)
+  } else {
+      //segunda parte
+  baseNeg = []
+  for (let i = 0; i < points.length; i++) {
+    for (let j = i + 1; j < points.length; j++) {
+      baseNeg.push(Math.abs(points[i][0] - points[j][0]))
+    }
+  }
 
+  //baseNeg = baseNeg.filter((este, i) => baseNeg.indexOf(este) == i)
+  console.log(baseNeg)
 
+  alturaNeg = []
+  for (let i = 0; i < points.length; i++) {
+    for (let j = i + 1; j < points.length; j++) {
+      alturaNeg.push(Math.abs(points[i][1] - points[j][1]))
+    }
+  }
 
+  //alturaNeg = alturaNeg.filter((este, i) => alturaNeg.indexOf(este) == i)
+  console.log(alturaNeg)
 
+  // Terceira parte
 
-  return 3*5
+  areaNeg = 0
+  for (let i = 0; i < baseNeg.length; i++) {
+    areaNeg += (baseNeg[i] * alturaNeg[i]) / 2
+  }
+
+  console.log(areaNeg)
+
+  // quarta parte
+
+  areaTriangle = (base*altura) - areaNeg
+
+  return areaTriangle
 }
+  }
 
-console.log(largestTriangleArea([[4,6],[6,5],[3,1]]))
+
+
+
+
+
+console.log(
+  largestTriangleArea([
+    [4, 6],
+    [6, 5],
+    [3, 1]
+  ])
+)
+
+console.log(
+  largestTriangleArea([[1,0],[0,0],[0,1]])
+)
+
+
+
+console.log(
+  largestTriangleArea([
+    [0, 0],
+    [0, 1],
+    [1, 0],
+    [0, 2],
+    [2, 0]
+  ])
+)
+
+
+console.log(
+  largestTriangleArea([
+    [0, 0],
+    [0, 2],
+    [2, 0]
+  ])
+)
