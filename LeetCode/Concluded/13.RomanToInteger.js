@@ -9,10 +9,6 @@ var romanToInt = function(s) {
         M: 1000
     }
 
-    let unity = false
-    let ten = false
-    let hundred = false
-
     var sum = 0
     for (let i = 0; i < s.length; i++) {
         for (let j = 0; j < Object.keys(romano).length; j++) {
@@ -22,7 +18,6 @@ var romanToInt = function(s) {
         } 
     }
     if (s.includes('IV') || s.includes('IX')){
-        unity = true
         if (s.includes('IV') & s.includes('IX')) {
             sum -= 4
         } else{
@@ -30,7 +25,6 @@ var romanToInt = function(s) {
         } 
     }
     if (s.includes('XL') || s.includes('XC')){
-        ten = true
         if (s.includes('XL') & s.includes('XC')){
             sum -= 40
         } else {
@@ -38,7 +32,6 @@ var romanToInt = function(s) {
         }
     }
     if (s.includes('CM') || s.includes('CD')){
-        hundred = true
         if (s.includes('CM') & s.includes('CD')){
             sum -= 400
         } else {
