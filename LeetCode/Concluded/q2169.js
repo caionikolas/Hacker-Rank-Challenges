@@ -10,5 +10,5 @@ var countOperations = function(num1, num2) {
     }
 };
 
-console.log(countOperations(2, 3)) 
-console.log(countOperations(10, 10))
+console.log(countOperations(2, 3)) //2 ,1 // 1, 1 // 0 ,1  3
+console.log(countOperations(10, 10)) // 0, 10 1
