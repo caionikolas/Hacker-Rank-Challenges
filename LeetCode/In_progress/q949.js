@@ -1,12 +1,13 @@
 var largestTimeFromDigits = function(arr) {
+    let rra = arr.reverse()
     let newArr = []
-    while (arr.length > 0){
+    while (rra.length > 0){
         let j = 0
-        for (let i = 0; i < arr.length; i++) {
-            if (arr[i] == 3){
-                newArr.push(arr[j])
-                j++
+        for (let i = 0; i < rra.length; i++) {
+            if (rra[i] == 3){
+                newArr.push(rra[j])
             }
+            
         }
     }
 
