@@ -1,64 +1,57 @@
-/* ----fontes ---- */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+</style>
 
-font-family: 'Poppins', sans-serif;
-
-/* ---- css tips ---- */
-* {
-  /* Reset padrão */
-  box-sizing: border-box;  /* Define tamanho da caixa */
-  margin: 0; 
-  padding: 0;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 
 body{
-  height: 100%; /* Define a Altura dos elementos Css (As propriedades max-height e min-height quando presentes, sobrescrevem a propriedade width) */
+    background-image: url(https://github.com/leovargasdev/br-challenges-blizzard/blob/master/assets/banner-hero/games/diablo-bg.png?raw=true);
+}
 
-  min-height: auto; /* Altura mínima (força a div ter uma altura mesmo se a mesma não tiver conteudo ou define um limite de altura q aquela div nao pode passar) */
+:root{
+    --colorh1: #ffffff;
+    --font-principal: 'Poppins', sans-serif;
+}
 
-  max-height: auto; /* Altura máxima */
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: solid white 1px;
+}
 
-  width: 100%; /* Define a Largura dos elementos Css (As propriedades max-width e min-width quando presentes, sobrescrevem a propriedade width) */
+section{
+    margin-left: 1.375rem;
+}
 
-  min-width: auto; /* Largura mínima */
+    header img{
+        margin: 1.469rem;
+        height: 2rem;
+        width: 4rem;
+    }
 
-  max-width: auto; /* Largura máxima */
+#principal h1{
+    height: 11rem;
+    width: 17.6875rem;
+    font-size: 2.5rem;
+    font-weight: 700px;
+    line-height: 110.2%;
+    letter-spacing: -0.5%;
+    font-family: var(--font-principal);
+    color: var(--colorh1);
+    margin-bottom: 1rem;
+    margin-top: 3.1875rem;
+}
 
-  position: absolute; /* Propriedade CSS que define como um elemento qualquer pode ser posicionado no documento da página  (desbloquea as propriedades Top, Botton, Left e Right)
-
-  // static (padrão): Elementos estaticos na página, por conta disso não desbloquea as propriedades top, botton, left , right
-  
-  // Fixed: Elemento fica fixo na página independente do scroll
-
-  // Sticky: Fixa o elemtento na tela quando chega na sua posição de rolagem
-
-  // Relative: Está posicionado em relação a sua posição normal
-
-  // Absolute: Posição está absoluta em relação a div pai que possui um position relative, caso não exista essa relação, ele será absoluto em relaçao ao posição do corpo da página(body) */
-
-  padding: auto; /* Espaçamento de dentro do elemento */
-
-  margin: auto; /* Espaçamento de fora do elemento */
-
-  justify-content: space-between; /* Alinha os itens horizontalmente 
-
-  // flex-end: Alinha tudo no final
-
-  // flex-start (padrão): Alinha tudo no começo
-
-  // center: Centraliza tudo
-
-  // space around: distribui os elementos levando em consideração o espaçamento entre eles
-
-  // space between: distribui os elementos levando em consideração o espaçamento entre eles porem sem as margens */
-
-  align-items: center; /* Alinha os itens verticalmente
-
-  // flex-start (padrão): Alinha tudo encima
-
-  // flex-end: Alinha tudo embaixo
-
-  // center: Centraliza tudo */
-
-  z-index: 10000; 
+#principal h3{
+    font-family: var(--font-principal);
+    color: var(--colorh1);
+    font-style: normal;
+    font-size: 1.125rem;
+    line-height: 1.687rem;
+    letter-spacing: -.005rem;
 }
